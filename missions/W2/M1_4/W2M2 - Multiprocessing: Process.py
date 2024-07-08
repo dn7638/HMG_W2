@@ -7,6 +7,13 @@ def print_continent_name(continent="Asia"):
     time.sleep(1)  # 시뮬레이션을 위해 1초 대기
 
 if __name__ == '__main__':
+    '''
+    Process 클래스를 통해 프로세스를 생성하여 병럴 작업을 수행할 수 있음
+    이 연습에서는 총 4개의 프로세스를 생성함
+    4개의 프로세스는 병렬적으로 수행됨
+    
+    join 메소드를 통해 부모 프로세스에서 자식 프로세스가 종료된 이후 다음 명령을 수행합니다.
+    '''
     # 다른 대륙 이름들
     continents = ["America", "Europe", "Africa"]
     

@@ -8,8 +8,9 @@ import random
 부모 프로세스는 자식 프로세스들과 공유 가능한 Queue를 생성하여 정보를 공유합니다.
 자식 프로세스는 공유된 큐에서 데이터를 병렬적으로 처리합니다.
 
-multiprocessing 모듈의 Queue는 critical section에 대한 처리가 되어있으므로
-시간적인 우위를 가져가지는 않을 것입니다.
+multiprocessing 모듈의 Queue는 critical section에 대한 처리가 되어있습니다
+queue에서 데이터를 꺼내는 작업은 FIFO 순서이지만, queue에서 데이터를 꺼낸 순서가
+그 데이터를 처리하여 작업을 마친 순서임은 보장할 수 없습니다
 '''
 def do_job(tasks_to_accomplish, tasks_that_are_done):
     while True:
