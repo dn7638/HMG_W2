@@ -9,4 +9,9 @@
         <name>yarn.resourcemanager.hostname</name>
         <value>resourcemanager</value>
     </property>
+
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
 </configuration>
